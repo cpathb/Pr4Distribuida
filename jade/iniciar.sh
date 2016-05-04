@@ -1,0 +1,1 @@
+java -cp ./lib/jade.jar:./agents jade.Boot -gui -df V1:NombrePaquete.NombreClaseAgente(SIN .class)
