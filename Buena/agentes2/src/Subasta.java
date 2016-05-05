@@ -10,23 +10,32 @@ import java.util.LinkedList;
  */
 public class Subasta {
     private String titulo;
-    private AID GanadorAnterior;
     private AID GanadorActual;
     private int precio;
     private int minimo;
     private int incremento;
-    private int triunfo;
     private LinkedList<AID> pujadores;
+
     
     public Subasta(String titulo, int precio, int incremento, int minimo) {
         this.titulo = titulo;
         this.GanadorActual = null;
-        this.GanadorAnterior= null;
-        this.precio = precio;
-        this.incremento = incremento;
-        this.pujadores=new LinkedList();
-        this.triunfo=0;
+        if(precio<1){ // Comprobamos que el precio no sea menor de 1€
+            this.precio = 1;
+        }
+        else{
+            this.precio = precio;
+        }
+        if(incremento<1){ // Comprobamos que el incremento no sea menor de 1€
+            this.incremento = 1;
+        }
+        else{
+            this.incremento = incremento;
+        }
         this.minimo=minimo;
+        this.pujadores=new LinkedList<AID>();
+
+
     }
 
     public LinkedList<AID> getPujadores() {
@@ -43,14 +52,6 @@ public class Subasta {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
-    }
-
-    public AID getGanadorAnterior() {
-        return GanadorAnterior;
-    }
-
-    public void setGanadorAnterior(AID GanadorAnterior) {
-        this.GanadorAnterior = GanadorAnterior;
     }
 
     public AID getGanadorActual() {
@@ -84,13 +85,4 @@ public class Subasta {
     public void setIncremento(int incremento) {
         this.incremento = incremento;
     }
-
-    public int getTriunfo() {
-        return triunfo;
-    }
-
-    public void setTriunfo(int triunfo) {
-        this.triunfo = triunfo;
-    }
-    
 }
