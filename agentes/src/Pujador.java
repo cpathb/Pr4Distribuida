@@ -71,6 +71,7 @@ public class Pujador extends Agent{
 
         // Cerramos la interfaz
         interfaz.dispose();
+
     }
 
     private class consultas extends CyclicBehaviour {

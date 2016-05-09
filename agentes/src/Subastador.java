@@ -98,7 +98,6 @@ public class Subastador extends Agent{
         // Cerramos la interfaz
         interfaz.dispose();
 
-       
     }
 
     /**

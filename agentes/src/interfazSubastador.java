@@ -12,11 +12,11 @@ public class interfazSubastador extends javax.swing.JFrame {
         Agente=agente;
         initComponents();
         // Controlamos que se cierre la ventana	
-        addWindowListener(new	WindowAdapter() {
-                public void windowClosing(WindowEvent e) {
-                    Agente.doDelete();
-                }
-        } );
+        addWindowListener(new WindowAdapter(){
+            public void windowClosing(WindowEvent e) {
+                Agente.doDelete();
+            }
+        });
     }
 
     /**

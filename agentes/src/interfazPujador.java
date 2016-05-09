@@ -10,12 +10,11 @@ public class interfazPujador extends javax.swing.JFrame {
         initComponents();
         
         // Controlamos que se cierre la ventana	
-        addWindowListener(new	WindowAdapter() {
-                public void windowClosing(WindowEvent e) {
-                    Agente.doDelete();
-                }
-        } );
-        
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                Agente.doDelete();
+            }
+        });
     }
 
 
