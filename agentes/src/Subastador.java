@@ -230,9 +230,6 @@ public class Subastador extends Agent{
                     interfaz.listaSubastas(modelo);
                     interfaz.añadirMensaje(titulo + " eliminado de nuestra lista de subastas");
                 }
-                else{
-                    interfaz.añadirMensaje("No estamos interesados en "+titulo);
-                }
             }
         });
     }

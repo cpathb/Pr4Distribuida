@@ -110,7 +110,7 @@ public class Pujador extends Agent{
                     String titulo=partes[0];
                     int precio= Integer.parseInt(partes[1]);
                     eliminarObjeto(titulo);
-                    interfaz.añadirMensaje("Has ganado la puja para: "+titulo+" con un precio de "+precio);
+                    interfaz.añadirMensaje("Has ganado la puja del vendedor "+msg.getSender().getName()+" para: "+titulo+" con un precio de "+precio);
                 }
                 if(msg.getPerformative()==ACLMessage.INFORM){ // Se acabo una ronda de pujas de una subasta o nos hemos retirado de una puja
                     if(msg.getConversationId().compareTo("Ronda")==0){ // Fin de ronda
@@ -172,9 +172,6 @@ public class Pujador extends Agent{
                     });
                     interfaz.listaInteres(modelo);
                     interfaz.añadirMensaje(titulo + " eliminado de nuestra lista de interes");
-                }
-                else{
-                    interfaz.añadirMensaje("No estamos interesados en "+titulo);
                 }
             }
         });
